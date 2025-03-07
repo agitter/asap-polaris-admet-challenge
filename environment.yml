@@ -2,8 +2,10 @@ name: asap-admet
 channels:
   - conda-forge
 dependencies:
+  - aiohttp
   - datamol
   - fsspec
+  - ipywidgets
   - matplotlib
   - notebook
   - numpy
@@ -11,8 +13,9 @@ dependencies:
   - pip
   - polaris=0.11
   - python=3.11
+  - s3fs
   - scikit-learn>=1.3.1,<=1.6.1
   - scipy
   - seaborn
-#  - pip:
-#      - tabpfn-client==0.1.4
+  - pip:
+      - tabpfn-client==0.1.4
