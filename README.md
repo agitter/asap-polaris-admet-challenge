@@ -29,10 +29,10 @@ tabpfn-community
 Successfully installed cloudpickle-3.1.1 filelock-3.17.0 future-1.0.0 hyperopt-0.2.7 kditransform-0.2.0 llvmlite-0.44.0 mpmath-1.3.0 numba-0.61.0 py4j-0.10.9.9 seaborn-0.12.2 sympy-1.13.1 tabpfn-community-0.0.4 torch-2.6.0
 
 ```commandline
-$ jupyter nbconvert --to python Ligand-ADMET-Potency.ipynb
+$ jupyter nbconvert --to python ligand-admet-potency.ipynb
 ```
 to obtain `Ligand-ADMET-Potency.py`
 
 ## Third-party files
-- `Ligand-ADMET-Potency.ipynb` and `Ligand-ADMET-Potency.py` are derived from [`01. Ligand ADMET and Potency (Property Prediction).ipynb`](https://github.com/asapdiscovery/asap-polaris-blind-challenge-examples/blob/1952430cfed535ab13ab92eefa92487d908338ee/01.%20Ligand%20ADMET%20and%20Potency%20(Property%20Prediction).ipynb) by [Cas Wognum](https://github.com/cwognum).
+- `Ligand-ADMET-Potency.ipynb` and `ligand-admet-potency.py` are derived from [`01. Ligand ADMET and Potency (Property Prediction).ipynb`](https://github.com/asapdiscovery/asap-polaris-blind-challenge-examples/blob/1952430cfed535ab13ab92eefa92487d908338ee/01.%20Ligand%20ADMET%20and%20Potency%20(Property%20Prediction).ipynb) by [Cas Wognum](https://github.com/cwognum).
 - `phe_example.py` is test code from [PriorLabs/tabpfn-extensions](https://github.com/PriorLabs/tabpfn-extensions/blob/3d04dd51bbe2d3d368512c4a6f5d468d37aa9f71/examples/phe/phe_example.py).
