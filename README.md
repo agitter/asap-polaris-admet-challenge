@@ -5,28 +5,15 @@ The ADMET Challenge of the ASAP Discovery competition
 ```
 conda env create -f environment.yml
 conda activate asap-admet
-pip install git+https://github.com/PriorLabs/tabpfn-client.git
-pip install "tabpfn-community[post_hoc_ensembles] @ git+https://github.com/PriorLabs/tabpfn-community.git"
-pip install -U "tabpfn-community[post_hoc_ensembles] @ git+https://github.com/PriorLabs/tabpfn-community.git"
+pip install "tabpfn-extensions[post_hoc_ensembles] @ git+https://github.com/PriorLabs/tabpfn-extensions.git"
 ```
-tabpfn-client was not available directly via `pip`, so it was installed from [GitHub](https://github.com/PriorLabs/tabpfn-client).
-The command above installed tabpfn-client commit 4c591d703cd34f4c2fd8b893adfa07bf5b14b942.
-The latest tabpfn-client PyPI release at the time was verison 0.1.4.
-It installed tabpfn-community commit 366df608c79e2b8375cdd3cf5c5b3672448fcffb.
-The latest tabpfn-community PyPI release at the time was verison 2.0.5.
-Second time installing with -U
-Resolved https://github.com/PriorLabs/tabpfn-community.git to commit 3d04dd51bbe2d3d368512c4a6f5d468d37aa9f71
-The latest tabpfn-community PyPI release at the time was verison 2.0.6.
+Installed tabpfn-community commit 3d04dd51bbe2d3d368512c4a6f5d468d37aa9f71 and additional dependencies from pip:
+```commandline
+Successfully installed MarkupSafe-3.0.2 cloudpickle-3.1.1 filelock-3.17.0 future-1.0.0 hyperopt-0.2.7 jinja2-3.1.6 kditransform-0.2.0 llvmlite-0.44.0 mpmath-1.3.0 numba-0.61.0 numpy-2.1.3 nvidia-cublas-cu12-12.4.5.8 nvidia-cuda-cupti-cu12-12.4.127 nvidia-cuda-nvrtc-cu12-12.4.127 nvidia-cuda-runtime-cu12-12.4.127 nvidia-cudnn-cu12-9.1.0.70 nvidia-cufft-cu12-11.2.1.3 nvidia-curand-cu12-10.3.5.147 nvidia-cusolver-cu12-11.6.1.9 nvidia-cusparse-cu12-12.3.1.170 nvidia-cusparselt-cu12-0.6.2 nvidia-nccl-cu12-2.21.5 nvidia-nvjitlink-cu12-12.4.127 nvidia-nvtx-cu12-12.4.127 py4j-0.10.9.9 seaborn-0.12.2 sympy-1.13.1 tabpfn-extensions-0.0.4 torch-2.6.0 triton-3.2.0
+```
 This Stack Overflow [post](https://stackoverflow.com/a/76620421) gives the pip syntax for installing optional dependencies from GitHub.
 
 The output of `conda list` is stored is `conda-list.txt`.
-
-Temp package notes, add to env later:  
-Install missing packages:  
-iprogress ipywidgets s3fs aiohttp
-
-tabpfn-community
-Successfully installed cloudpickle-3.1.1 filelock-3.17.0 future-1.0.0 hyperopt-0.2.7 kditransform-0.2.0 llvmlite-0.44.0 mpmath-1.3.0 numba-0.61.0 py4j-0.10.9.9 seaborn-0.12.2 sympy-1.13.1 tabpfn-community-0.0.4 torch-2.6.0
 
 ```commandline
 $ jupyter nbconvert --to python ligand-admet-potency.ipynb
