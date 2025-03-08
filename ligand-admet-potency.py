@@ -83,7 +83,8 @@ competition.submit_predictions(
                 "of features tested by TabPFN. The training data is fit with a TabPFNRegressor, which is a pretrained"
                 "tabular foundation model. It uses in-context learning to adapt to the ADMET dataset and make"
                 "predictions on the test set. This is an entirely black box approach that treats the ADMET data as"
-                "an arbitrary tabular dataset.",
+                "an arbitrary tabular dataset. Further details are in writeup.md in the GitHub repository, which is"
+                "archived on Zenodo.",
     tags=["tabular foundation model", "single-task", "in-context-learning", "black box"],
     user_attributes={"Framework": "Tabular Prior-data Fitted Network (TabPFN)",
                      "Method": "TabPFNRegressor",
