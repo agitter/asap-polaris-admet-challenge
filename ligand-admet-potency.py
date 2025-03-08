@@ -18,6 +18,7 @@ import numpy as np
 import pandas as pd
 import polaris as po
 from sklearn.ensemble import GradientBoostingRegressor
+from tabpfn_extensions.post_hoc_ensembles.sklearn_interface import AutoTabPFNRegressor
 
 CHALLENGE = "antiviral-admet-2025"
 OUT_FILE = CHALLENGE + '-pred.tsv'
@@ -52,7 +53,9 @@ for tgt in competition.target_cols:
     mask = ~np.isnan(y_true)
 
     # We'll train a simple baseline model
-    model = GradientBoostingRegressor()
+    # TODO update comments if TabPFN works
+    #model = GradientBoostingRegressor()
+    model = AutoTabPFNRegressor(max_time=60 * 3)
     model.fit(X_train[mask], y_true[mask])
 
     # And then use that to predict the targets for the test set
