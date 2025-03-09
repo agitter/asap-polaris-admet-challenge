@@ -19,6 +19,17 @@ $ jupyter nbconvert --to python Ligand-ADMET-Potency.ipynb
 ```
 was run to obtain `ligand-admet-potency.py` (the file was renamed to lowercase).
 
+## Usage
+```commandline
+python ligand-admet-potency-single.py LogD
+```
+Repeat for all five ADMET properties: "LogD", "HLM", "MDR1-MDCKII", "KSOL", "MLM"
+
+```commandline
+python submit-predictions.py
+```
+To submit the stored predictions for all five ADMET properties.
+
 ## Source files
 - `ligand-admet-potency-single.py` Trains TabPFNRegressor on a single ADMET property specified on the command line and writes the results to disk. Does not submit.
 - `ligand-admet-potency.py`: Trains TabPFNRegressor on all ADMET properties and submits. However, this hits the API limit so it cannot be run successfully.
