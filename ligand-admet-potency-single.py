@@ -50,9 +50,6 @@ X_test = np.array([dm.to_fp(dm.to_mol(smi), fpSize=500) for smi in test.X])
 
 y_pred = {}
 
-# REMOVE
-from sklearn.ensemble import GradientBoostingRegressor
-
 tgt = args.target
 # TabPFN supports single-task modeling
 # Note that we need to mask out NaNs since the multi-task matrix is sparse.
@@ -66,8 +63,7 @@ mask = ~np.isnan(y_true)
 # model = AutoTabPFNRegressor(max_time=60 * 3)
 # Use default args (see
 # https://github.com/PriorLabs/TabPFN/blob/05ab7da2df93104e071e62cea0d1fffd78883716/src/tabpfn/regressor.py#L173)
-model = GradientBoostingRegressor()
-#    model = TabPFNRegressor()
+model = TabPFNRegressor()
 model.fit(X_train[mask], y_true[mask])
 
 # And then use that to predict the targets for the test set
@@ -81,23 +77,3 @@ OUT_FILE = f"{CHALLENGE}-{tgt}-pred.tsv"
 # Save the predictions to disk in addition to submitting them
 y_pred_df = pd.DataFrame(y_pred)
 y_pred_df.to_csv(OUT_FILE, sep='\t', index=False)
-
-# Do not submit the single property predictions
-# competition.submit_predictions(
-#     predictions=y_pred,
-#     prediction_name="TabPFNRegressor",
-#     prediction_owner="agitter",
-#     report_url="https://doi.org/10.5281/zenodo.14993394",
-#     github_url="https://github.com/agitter/asap-polaris-admet-challenge",
-#     description="The approach featurizes molecules using ECFP6 fingerprints of size 500, which is the maximum number"
-#                 "of features tested by TabPFN. The training data is fit with a TabPFNRegressor, which is a pretrained"
-#                 "tabular foundation model. It uses in-context learning to adapt to the ADMET dataset and make"
-#                 "predictions on the test set. This is an entirely black box approach that treats the ADMET data as"
-#                 "an arbitrary tabular dataset. Further details are in writeup.md in the GitHub repository, which is"
-#                 "archived on Zenodo.",
-#     tags=["tabular foundation model", "single-task", "in-context-learning", "black box"],
-#     user_attributes={"Framework": "Tabular Prior-data Fitted Network (TabPFN)",
-#                      "Method": "TabPFNRegressor",
-#                      "Citation": "https://doi.org/10.1038/s41586-024-08328-6",
-#                      "Features": "ECFP6 fingerprints of size 500"}
-# )
