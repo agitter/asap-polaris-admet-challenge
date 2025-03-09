@@ -76,7 +76,7 @@ y_pred[tgt] = model.predict(X_test)
 # Inspect the predictions
 print(y_pred)
 
-OUT_FILE = r"{CHALLENGE}-{tgt}pred.tsv"
+OUT_FILE = f"{CHALLENGE}-{tgt}-pred.tsv"
 
 # Save the predictions to disk in addition to submitting them
 y_pred_df = pd.DataFrame(y_pred)
