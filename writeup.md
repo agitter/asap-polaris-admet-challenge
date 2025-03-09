@@ -33,7 +33,7 @@ Maybe not.
 That is the joy of open competitions.
 We as a community can try things and see what works and what fails.
 I like to use these competitions to explore ideas I would not use in my day-to-day research.
-In the Adaptyv EGFR protein design competition I [used](https://github.com/agitter/adaptyvbio-egfr?tab=readme-ov-file#round-1-submission) Llama 3.1 and [ProTrek](https://doi.org/10.1101/2024.05.30.596740) for some of my designs.
+In the Adaptyv EGFR protein design competition [round 1](https://github.com/agitter/adaptyvbio-egfr?tab=readme-ov-file#round-1-submission) I used Llama 3.1 and [ProTrek](https://doi.org/10.1101/2024.05.30.596740) for some of my designs.
 They failed.
 
 TabPFN was easy to implement because it follows the scikit-learn API.
@@ -43,7 +43,8 @@ I was unable to get the TabPFN model ensembles to work property, however, which 
 From a usability and commercialization perspective, TabPFN makes some interesting choices.
 The code is Apache License 2.0 licensed, which is great.
 The API is free to use up to a point.
-There is a limit of 5000000 (table) cells per day, which is consumed quickly when running its example ensembling code.
+There is a limit of 5000000 (table) cells per day, which is consumed quickly.
+I was unable to train models for all the ADMET properties within the daily limit, which was a practical challenge that made the code more complicated than it needed to be.
 I have not yet tried running the models locally or contacting the team to discuss increasing the default daily limit.
 
 Polaris was excellent as a competition platform.
