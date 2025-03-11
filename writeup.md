@@ -46,6 +46,14 @@ The API is free to use up to a point.
 There is a limit of 5000000 (table) cells per day, which is consumed quickly.
 I was unable to train models for all the ADMET properties within the daily limit, which was a practical challenge that made the code more complicated than it needed to be.
 I have not yet tried running the models locally or contacting the team to discuss increasing the default daily limit.
+If I were to do this again, I would have set up the models locally instead of using the API.
+
+After submitting, I found that using TabPFN for chemical property prediction was not as original of an idea as I initially thought.
+Pat Walters published a [blog post](https://practicalcheminformatics.blogspot.com/2025/03/even-more-thoughts-on-ml-method.html) including TabPFN with [RDKit properties](https://www.rdkit.org/docs/source/rdkit.Chem.rdMolDescriptors.html) that linked to other posts from [Jonathan Swain](https://jonswain.github.io/ai/cheminformatics/data%20science/machine%20learning/2025/01/22/TabPFN-for-chemical-datasets.html) and [Chris Swain](https://macinchem.org/2025/02/06/looking-at-tabpfn/).
+Jonathan tried 210 RDKit descriptors, MACCS keys, and ECPF folded to 500 bits as features with the RDKit descriptors performing best.
+That suggests my results may have been better with RDKit descriptors instead of short fingerprints.
+With more time, I would have created cross validation folds from the training data to explore different chemical features.
+Pat's [code](https://github.com/PatWalters/practical_cheminformatics_posts/blob/main/adme_comparison/tabpfn_wrapper.py) shows that he also used the TabPFNRegressor instead of the ensemble AutoTabPFNRegressor, which might further boost performance.
 
 Polaris was excellent as a competition platform.
 The tutorial Jupyter notebook was easy to adapt, and making submissions was seamless.
