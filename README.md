@@ -1,4 +1,5 @@
 # ADMET Challenge of the ASAP Discovery competition
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14993394.svg)](https://doi.org/10.5281/zenodo.14993394)
 
 ## Setup
 ```
