@@ -24,7 +24,10 @@ The model is run using the TabPFN API instead of the local model.
 Each ADMET property is fit independently in a single-task manner.
 
 ## Results
-To be determined after the competition closes.
+The competition [results](https://polarishub.io/competitions/asap-discovery/antiviral-drug-discovery-2025) show that my method did not perform well.
+It ranked 27th by aggregated performance, in the bottom half of the submissions.
+More importantly, it was ranked immediately above the [baseline](https://github.com/asapdiscovery/asap-polaris-challenge-baselines) submission, with better aggregated mean absolute error and some worse performance per the other metrics considered.
+The baseline was scikit-learn linear regression with calculated LogP as the molecular descriptor, so I consider this is a negative result for TabPFN
 
 ## Discussion
 Was ignoring the biochemical domain a good idea?
