@@ -1,4 +1,4 @@
-# ADMET prediction with TabPFN
+# ASAP Discovery x OpenADMET Challenge with the Tabular Prior-Data Fitted Network
 Anthony Gitter  
 Archived at https://doi.org/10.5281/zenodo.14993394
 
