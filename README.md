@@ -41,3 +41,16 @@ To submit the stored predictions for all five ADMET properties.
 $ jupyter nbconvert --to python Ligand-ADMET-Potency.ipynb
 ```
 was run to obtain `ligand-admet-potency.py` (the file was renamed to lowercase).
+
+## Citation
+```
+@article{gitter_asap_2025,
+	title = {{ASAP} {Discovery} x {OpenADMET} {Challenge} with the {Tabular} {Prior}-{Data} {Fitted} {Network}},
+	url = {https://github.com/agitter/asap-polaris-admet-challenge},
+	doi = {10.5281/zenodo.14993394},
+	journal = {Zenodo},
+	author = {Gitter, Anthony},
+	month = mar,
+	year = {2025},
+}
+```
