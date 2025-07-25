@@ -54,3 +54,5 @@ was run to obtain `ligand-admet-potency.py` (the file was renamed to lowercase).
 	year = {2025},
 }
 ```
+
+See the challenge [preprint](https://doi.org/10.26434/chemrxiv-2025-zd9mr) for more information about the dataset and evaluation.
